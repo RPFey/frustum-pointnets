@@ -15,7 +15,7 @@ ROOT_DIR = os.path.dirname(BASE_DIR)
 sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(ROOT_DIR, 'mayavi'))
 import kitti_util as utils
-import cPickle as pickle
+import pickle
 from kitti_object import *
 import argparse
 
@@ -45,7 +45,7 @@ def demo():
     import mayavi.mlab as mlab
     from viz_util import draw_lidar, draw_lidar_simple, draw_gt_boxes3d
     dataset = kitti_object(os.path.join(ROOT_DIR, 'dataset/KITTI/object'))
-    data_idx = 0
+    data_idx = 692
 
     # Load data from dataset
     objects = dataset.get_label_objects(data_idx)
